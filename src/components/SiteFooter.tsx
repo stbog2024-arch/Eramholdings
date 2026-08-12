@@ -47,6 +47,11 @@ export function SiteFooter() {
               </a>
             </p>
             <p>
+              <a href="mailto:info@eramholdings.co.ke" className="hover:text-primary-foreground">
+                info@eramholdings.co.ke
+              </a>
+            </p>
+            <p>
               <a href="mailto:eramholdings@outlook.com" className="hover:text-primary-foreground">
                 eramholdings@outlook.com
               </a>
