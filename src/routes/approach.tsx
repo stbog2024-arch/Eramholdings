@@ -16,7 +16,15 @@ export const Route = createFileRoute("/approach")({
         property: "og:description",
         content: "Participatory, context-specific and evidence-based governance consulting.",
       },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/approach" },
+      { name: "twitter:title", content: "Our Approach | Eram Holdings Limited" },
+      {
+        name: "twitter:description",
+        content: "Participatory, context-specific and evidence-based governance consulting.",
+      },
     ],
+    links: [{ rel: "canonical", href: "/approach" }],
   }),
   component: Approach,
 });

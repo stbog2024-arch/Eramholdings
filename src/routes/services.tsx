@@ -17,7 +17,16 @@ export const Route = createFileRoute("/services")({
         content:
           "Five practice areas spanning elections, peacebuilding, training, research and advocacy.",
       },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/services" },
+      { name: "twitter:title", content: "Our Services | Eram Holdings Limited" },
+      {
+        name: "twitter:description",
+        content:
+          "Five practice areas spanning elections, peacebuilding, training, research and advocacy.",
+      },
     ],
+    links: [{ rel: "canonical", href: "/services" }],
   }),
   component: Services,
 });

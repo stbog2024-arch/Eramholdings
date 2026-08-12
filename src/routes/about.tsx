@@ -16,7 +16,15 @@ export const Route = createFileRoute("/about")({
         property: "og:description",
         content: "Our vision, mission and core values in governance and peacebuilding.",
       },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/about" },
+      { name: "twitter:title", content: "About Eram Holdings Limited" },
+      {
+        name: "twitter:description",
+        content: "Our vision, mission and core values in governance and peacebuilding.",
+      },
     ],
+    links: [{ rel: "canonical", href: "/about" }],
   }),
   component: About,
 });

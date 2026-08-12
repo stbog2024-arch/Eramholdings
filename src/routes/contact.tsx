@@ -17,7 +17,15 @@ export const Route = createFileRoute("/contact")({
         property: "og:description",
         content: "Baywater Court, Suite 6, Ngong Road, Nairobi, Kenya.",
       },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/contact" },
+      { name: "twitter:title", content: "Contact Eram Holdings Limited" },
+      {
+        name: "twitter:description",
+        content: "Baywater Court, Suite 6, Ngong Road, Nairobi, Kenya.",
+      },
     ],
+    links: [{ rel: "canonical", href: "/contact" }],
   }),
   component: Contact,
 });
