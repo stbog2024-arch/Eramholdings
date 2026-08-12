@@ -1,24 +1,146 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { Vote, HandshakeIcon, GraduationCap, LineChart, Megaphone, ArrowRight } from "lucide-react";
+import hero from "@/assets/hero-elections.jpg";
+import peace from "@/assets/peacebuilding.jpg";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "Eram Holdings Limited | Electoral Governance & Peacebuilding, Kenya" },
+      {
+        name: "description",
+        content:
+          "Eram Holdings Limited strengthens democratic institutions in Kenya through electoral governance, peacebuilding, training, research and advocacy.",
+      },
+      { property: "og:title", content: "Eram Holdings Limited | Governance & Peacebuilding" },
+      {
+        property: "og:description",
+        content:
+          "Consulting in electoral governance, civic education, peacebuilding, leadership development, research and advocacy.",
+      },
+    ],
+  }),
+  component: Home,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+const services = [
+  { icon: Vote, title: "Electoral Governance", text: "Preparedness, observation, dispute prevention and voter education." },
+  { icon: HandshakeIcon, title: "Peacebuilding", text: "Early warning, dialogue facilitation, mediation and social cohesion." },
+  { icon: GraduationCap, title: "Training", text: "Customised programmes in governance, leadership and civic education." },
+  { icon: LineChart, title: "Research & Policy", text: "Governance assessments, conflict mapping and impact studies." },
+  { icon: Megaphone, title: "Advocacy", text: "Policy campaigns, citizen forums and public participation." },
+];
+
+function Home() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <section className="relative isolate overflow-hidden bg-ink text-primary-foreground">
+        <img
+          src={hero}
+          alt="Kenyan voters queuing at a polling station"
+          width={1600}
+          height={1008}
+          className="absolute inset-0 h-full w-full object-cover opacity-35"
+        />
+        <div className="relative mx-auto max-w-6xl px-5 py-28 md:py-40">
+          <p className="rule-label text-primary-foreground/70">Nairobi, Kenya</p>
+          <h1 className="mt-5 max-w-3xl text-4xl leading-[1.1] md:text-6xl">
+            Credible elections. Peaceful communities. Accountable institutions.
+          </h1>
+          <p className="mt-6 max-w-xl text-base text-primary-foreground/80 md:text-lg">
+            Eram Holdings Limited is a Kenyan consulting firm specialising in electoral governance,
+            civic education, peacebuilding, leadership development, research and advocacy.
+          </p>
+          <div className="mt-9 flex flex-wrap gap-3">
+            <Link
+              to="/services"
+              className="inline-flex items-center gap-2 rounded-sm bg-primary-foreground px-5 py-3 text-sm font-medium text-ink"
+            >
+              Explore our services <ArrowRight size={16} />
+            </Link>
+            <Link
+              to="/contact"
+              className="rounded-sm border border-primary-foreground/40 px-5 py-3 text-sm font-medium"
+            >
+              Talk to our team
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-5 py-20">
+        <div className="grid gap-12 md:grid-cols-[1fr_1.2fr] md:items-center">
+          <img
+            src={peace}
+            alt="Community peace dialogue under a tree"
+            width={1200}
+            height={800}
+            loading="lazy"
+            className="rounded-sm object-cover"
+          />
+          <div>
+            <p className="rule-label text-primary">Who we are</p>
+            <h2 className="mt-4 text-3xl md:text-4xl">
+              Sustainable peace is built by informed citizens and strong institutions
+            </h2>
+            <p className="mt-5 text-muted-foreground">
+              We work with governments, independent commissions, civil society organisations,
+              development partners, educational institutions, community organisations and the
+              private sector to promote democratic governance, peaceful coexistence and inclusive
+              participation.
+            </p>
+            <p className="mt-4 text-muted-foreground">
+              We combine research, training, policy advocacy, dialogue facilitation and technical
+              advisory services to deliver practical and measurable outcomes.
+            </p>
+            <Link to="/about" className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-primary">
+              More about us <ArrowRight size={16} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-border bg-secondary">
+        <div className="mx-auto max-w-6xl px-5 py-20">
+          <p className="rule-label text-primary">What we do</p>
+          <h2 className="mt-4 text-3xl md:text-4xl">Five practice areas</h2>
+          <div className="mt-10 grid gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((s) => (
+              <div key={s.title} className="bg-card p-7">
+                <s.icon className="text-primary" size={26} />
+                <h3 className="mt-4 text-lg">{s.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{s.text}</p>
+              </div>
+            ))}
+            <Link
+              to="/services"
+              className="flex items-center justify-between gap-2 bg-primary p-7 text-primary-foreground"
+            >
+              <span className="text-lg">All services</span>
+              <ArrowRight size={18} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-5 py-20">
+        <div className="grid gap-10 md:grid-cols-2">
+          <div>
+            <p className="rule-label text-primary">Vision</p>
+            <p className="mt-4 font-display text-2xl leading-snug">
+              To be a leading regional institution advancing democratic governance, peaceful
+              societies and informed citizen participation.
+            </p>
+          </div>
+          <div>
+            <p className="rule-label text-primary">Mission</p>
+            <p className="mt-4 font-display text-2xl leading-snug">
+              To strengthen democratic institutions and communities through high-quality training,
+              research, advocacy and peacebuilding initiatives.
+            </p>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
