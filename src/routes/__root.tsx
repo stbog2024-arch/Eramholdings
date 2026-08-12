@@ -1,7 +1,7 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
-  Outlet,
   Link,
+
   createRootRouteWithContext,
   useRouter,
   HeadContent,
@@ -13,6 +13,9 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { RouteProgress } from "@/components/RouteProgress";
+import { RouteTransition } from "@/components/RouteTransition";
+
 
 function NotFoundComponent() {
   return (
@@ -148,11 +151,13 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <div className="flex min-h-screen flex-col">
+        <RouteProgress />
         <SiteHeader />
         <main className="flex-1">
-          {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-          <Outlet />
+          {/* Required: nested routes render here (RouteTransition wraps <Outlet />). */}
+          <RouteTransition />
         </main>
+
         <SiteFooter />
       </div>
     </QueryClientProvider>
