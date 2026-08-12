@@ -2,6 +2,8 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/eram-logo.png.asset.json";
+import { InternFormDialog } from "@/components/InternFormDialog";
+
 
 const nav = [
   { to: "/", label: "Home" },
@@ -68,8 +70,18 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
+          <InternFormDialog>
+            <button
+              type="button"
+              onClick={() => setOpen(false)}
+              className="mt-3 w-full rounded-sm bg-primary px-4 py-2 text-sm font-medium text-primary-foreground"
+            >
+              Work with us
+            </button>
+          </InternFormDialog>
         </nav>
       )}
+
     </header>
   );
 }
