@@ -87,7 +87,29 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { name: "author", content: "Eram Holdings Limited" },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Eram Holdings Limited" },
+      { property: "og:locale", content: "en_KE" },
       { name: "twitter:card", content: "summary_large_image" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Eram Holdings Limited",
+          description:
+            "Kenyan consulting firm specialising in electoral governance, civic education, peacebuilding, research and institutional capacity strengthening.",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Baywater Court, Suite 6, Ngong Road",
+            addressLocality: "Nairobi",
+            addressCountry: "KE",
+          },
+          telephone: "+254735728682",
+          email: "eramholdings@outlook.com",
+        }),
+      },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

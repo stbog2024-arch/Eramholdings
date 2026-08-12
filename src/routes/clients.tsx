@@ -16,7 +16,15 @@ export const Route = createFileRoute("/clients")({
         property: "og:description",
         content: "The institutions and communities we partner with across Kenya and the region.",
       },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/clients" },
+      { name: "twitter:title", content: "Our Clients | Eram Holdings Limited" },
+      {
+        name: "twitter:description",
+        content: "The institutions and communities we partner with across Kenya and the region.",
+      },
     ],
+    links: [{ rel: "canonical", href: "/clients" }],
   }),
   component: Clients,
 });

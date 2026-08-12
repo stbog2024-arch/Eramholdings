@@ -18,7 +18,16 @@ export const Route = createFileRoute("/")({
         content:
           "Consulting in electoral governance, civic education, peacebuilding, leadership development, research and advocacy.",
       },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
+      { name: "twitter:title", content: "Eram Holdings Limited | Governance & Peacebuilding" },
+      {
+        name: "twitter:description",
+        content:
+          "Consulting in electoral governance, civic education, peacebuilding, research and advocacy in Kenya.",
+      },
     ],
+    links: [{ rel: "canonical", href: "/" }],
   }),
   component: Home,
 });
