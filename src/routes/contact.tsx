@@ -64,7 +64,7 @@ function Contact() {
             },
             { icon: Inbox, label: "Postal address", lines: ["P.O. Box 28629 – 00100, Nairobi"] },
             { icon: Phone, label: "Telephone", lines: ["0735 728 682"] },
-            { icon: Mail, label: "Email", lines: ["eramholdings@outlook.com"] },
+            { icon: Mail, label: "Email", lines: ["info@eramholdings.co.ke", "eramholdings@outlook.com"] },
           ].map((b) => (
             <div key={b.label} className="flex gap-4">
               <b.icon className="mt-1 shrink-0 text-primary" size={20} />
