@@ -34,12 +34,15 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
-          <Link
-            to="/contact"
-            className="rounded-sm bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
-          >
-            Work with us
-          </Link>
+          <InternFormDialog>
+            <button
+              type="button"
+              className="rounded-sm bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+            >
+              Work with us
+            </button>
+          </InternFormDialog>
+
         </nav>
 
         <button
