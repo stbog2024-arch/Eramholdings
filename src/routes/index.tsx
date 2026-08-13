@@ -54,13 +54,7 @@ function Home() {
   return (
     <>
       <section className="relative isolate overflow-hidden bg-ink text-primary-foreground">
-        <img
-          src={hero}
-          alt="Kenyan voters queuing at a polling station"
-          width={1600}
-          height={1008}
-          className="absolute inset-0 h-full w-full object-cover opacity-35"
-        />
+        <HeroSlides slides={heroSlides} />
         <div className="relative mx-auto max-w-6xl px-5 py-28 md:py-40">
           <p className="rule-label text-primary-foreground/70">Nairobi, Kenya</p>
           <h1 className="mt-5 max-w-3xl text-4xl leading-[1.1] md:text-6xl">
