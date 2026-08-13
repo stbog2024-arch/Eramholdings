@@ -7,8 +7,8 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-3">
         <div>
           <div className="flex items-center gap-3">
-            <img src={icon.url} alt="" className="h-10 w-auto" />
-            <span className="font-display text-lg">Eram Holdings Limited</span>
+            <img src={icon.url} alt="" className="h-12 w-auto" />
+            <span className="font-display text-xl">Eram Holdings Limited</span>
           </div>
           <p className="mt-4 max-w-xs text-sm text-primary-foreground/70">
             A Kenyan consulting firm advancing electoral governance, peacebuilding and inclusive
