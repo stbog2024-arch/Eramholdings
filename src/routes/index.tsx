@@ -1,7 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Vote, HandshakeIcon, GraduationCap, LineChart, Megaphone, ArrowRight } from "lucide-react";
+import { HeroSlides } from "@/components/HeroSlides";
 import hero from "@/assets/hero-elections.jpg";
 import peace from "@/assets/peacebuilding.jpg";
+import training from "@/assets/training.jpg";
+import nairobi from "@/assets/nairobi.jpg";
+
+const heroSlides = [
+  { src: hero, alt: "Kenyan voters queuing at a polling station" },
+  { src: peace, alt: "Community peace dialogue under a tree" },
+  { src: training, alt: "Training workshop facilitated by Eram Holdings" },
+  { src: nairobi, alt: "Nairobi skyline at dusk" },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
