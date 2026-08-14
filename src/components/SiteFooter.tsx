@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import icon from "@/assets/eram-icon.png.asset.json";
+import icon from "@/assets/eram-icon.png";
 
 export function SiteFooter() {
   return (
@@ -7,7 +7,7 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-3">
         <div>
           <div className="flex items-center gap-3">
-            <img src={icon.url} alt="" className="h-12 w-auto" />
+            <img src={icon} alt="" className="h-12 w-auto" />
             <span className="font-display text-xl">Eram Holdings Limited</span>
           </div>
           <p className="mt-4 max-w-xs text-sm text-primary-foreground/70">
