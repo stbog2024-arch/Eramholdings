@@ -20,7 +20,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
       <div className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-3">
         <Link to="/" className="flex min-w-0 items-center gap-3" onClick={() => setOpen(false)}>
-          <img src={logo.url} alt="Eram Holdings Limited" className="h-14 w-auto shrink-0" />
+          <img src="/eram-logo.png" alt="Eram Holdings Limited" className="h-14 w-auto shrink-0" />
         </Link>
 
         <nav className="hidden items-center gap-7 md:flex">
