@@ -1,11 +1,3 @@
-# Cozy Corner Creations
-
-Create a responsive multipage  website, use the following attached  details
-
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
 Continue developing this project in the [Lovable editor](https://lovable.dev/projects/b1e8caf6-e878-4164-80b9-aeaca2ea49e8).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
