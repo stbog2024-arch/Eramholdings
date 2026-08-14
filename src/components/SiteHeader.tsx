@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/eram-logo.png.asset.json";
 import { InternFormDialog } from "@/components/InternFormDialog";
 
 
